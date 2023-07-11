@@ -2,5 +2,5 @@
 
 Change your API ChatGPT and Token discord bot in .evn file
 
-- run
+- run:
 node index.js

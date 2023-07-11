@@ -32,7 +32,7 @@ client.on("messageCreate", async function (message) {
       const content = response.data.choices[0].message;
       console.log(content);
 
-      // Chia chuỗi thành các phần nhỏ nếu vượt quá giới hạn 2000 từ của Discord
+      // Fix 2000 character limit
       if (content.length > 2000) {
         const chunks = content.match(/(.|[\r\n]){1,2000}/g);
 
