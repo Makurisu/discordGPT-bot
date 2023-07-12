@@ -33,7 +33,7 @@ client.on("messageCreate", async function (message) {
       const content = response.data.choices[0].message;
       console.log(content);
 
-      // Chia chuỗi thành các phần nhỏ nếu vượt quá giới hạn 2000 từ của Discord
+      // Fix 2000 character discord limit
       if (content.length > 2000) {
         const chunks = content.match(/(.|[\r\n]){1,2000}/g);
 
@@ -47,7 +47,7 @@ client.on("messageCreate", async function (message) {
     } catch (err) {
       console.error(err);
       await message.reply(
-        "Something when wrong! Contact Hung for more infomation"
+        "Something when wrong! Contact Hung for more information"
       );
     }
   });
